@@ -15,7 +15,7 @@ document.getElementById("generate").addEventListener("click", async function() {
         const response = await fetch(API_URL, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ prompt: keyword })
+            body: JSON.stringify({ prompt: `「${keyword}」を使って、カオスで面白い昔話を作ってください。` })
         });
         console.log(response);
 
