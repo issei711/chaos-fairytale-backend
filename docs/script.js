@@ -17,6 +17,7 @@ document.getElementById("generate").addEventListener("click", async function() {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ prompt: keyword })
         });
+        console.log(response);
 
         const data = await response.json();
         storyDiv.innerHTML = `<p>${data.story}</p>`;
