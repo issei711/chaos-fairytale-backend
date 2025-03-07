@@ -3,12 +3,14 @@ import flask
 import google.generativeai as genai
 from flask import request, jsonify
 from dotenv import load_dotenv
+from flask_cors import CORS
 
 # .envからAPIキーを読み込む
 load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 app = flask.Flask(__name__)
+CORS(app)
 
 @app.route("/generate_story", methods=["POST"])
 def generate_story():

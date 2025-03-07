@@ -1,4 +1,4 @@
-const API_URL = "https://chaos-fairytale-api.onrender.com"; // Render のURLを設定
+const API_URL = "https://chaos-fairytale-api.onrender.com/generate_story"; // Render のURLを設定
 
 document.getElementById("generate").addEventListener("click", async function() {
     const keyword = document.getElementById("keyword").value.trim();
