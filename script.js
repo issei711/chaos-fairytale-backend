@@ -1,3 +1,5 @@
+const API_URL = "https://chaos-fairytale-api.onrender.com"; // Render のURLを設定
+
 document.getElementById("generate").addEventListener("click", async function() {
     const keyword = document.getElementById("keyword").value.trim();
     const storyDiv = document.getElementById("story");
@@ -10,7 +12,7 @@ document.getElementById("generate").addEventListener("click", async function() {
     storyDiv.innerHTML = "<p>昔話を生成中...</p>";
 
     try {
-        const response = await fetch("https://chaos-fairytale-api.onrender.com/generate_story", {
+        const response = await fetch(API_URL, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ keyword: keyword })
