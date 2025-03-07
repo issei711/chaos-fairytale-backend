@@ -15,7 +15,7 @@ document.getElementById("generate").addEventListener("click", async function() {
         const response = await fetch(API_URL, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ keyword: keyword })
+            body: JSON.stringify({ prompt: keyword })
         });
 
         const data = await response.json();

@@ -12,6 +12,7 @@ GEMINI_API_URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemin
 @app.route("/generate_story", methods=["POST"])
 def generate_story():
     data = request.get_json()
+    print(f"🔍 受け取ったデータ: {data}")  # デバッグ用
     prompt = data.get("prompt", "むかしむかし")
 
     # Gemini API へリクエストを送信
